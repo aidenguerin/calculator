@@ -4,7 +4,6 @@ let operator = "";
 
 function deleteFromDisplay() {
     currentValue = currentValue.toString().slice(0,-1);
-
     updateDisplay();
 }
 
@@ -12,7 +11,6 @@ function clearDisplay() {
     storedValue = "";
     currentValue = "";
     operator = "";
-
     updateDisplay();
 }
 
@@ -42,33 +40,23 @@ function calculate() {
     let b = parseFloat(currentValue);
 
     switch (operator) {
-        case "+": 
-            currentValue = a + b;
+        case "+": currentValue = a + b;
             break;
-
-        case "-":
-            currentValue = a - b;
+        case "-": currentValue = a - b;
             break;
-
-        case "×":
-            currentValue = a * b;
+        case "×":currentValue = a * b;
             break;
-        
-        case "÷":
-            currentValue = a / b;
+        case "÷": currentValue = a / b;
             break;
-    
         default:
             break;
     }
-
     storedValue = "";
     operator = "";
 }
 
 const displayCurrentValue = document.querySelector("#current-value");
 const displayStoredValue = document.querySelector("#stored-value");
-
 
 const clearButton = document.querySelector("#clear-btn");
 clearButton.addEventListener('click', () => clearDisplay());
