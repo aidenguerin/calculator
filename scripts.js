@@ -75,9 +75,13 @@ numberButtons.forEach(element => {
 const operatorButtons = document.querySelectorAll(".operator");
 operatorButtons.forEach(element => {
     element.addEventListener('click', () => {
+        if (currentValue == "") {
+            return
+        }
+
+        // allows us to skip computing with = and continue with additional operations
         if (storedValue != "" && currentValue != "") {
             calculate();
-            updateDisplay();
         }
         setOperator(element.innerHTML);
         storeCurrentValue();
