@@ -8,35 +8,38 @@
 </head>
 <body>
     <div class="calculator-container">
-        <div class="display"></div>
+        <div id="display">
+            <div id="stored-value"></div>
+            <div id="current-value"></div>
+        </div>
         <div class="button-grid">
             <div class="row">
-                <div class="button" id="button-clear">CLEAR</div>
-                <div class="button" id="button-delete">DELETE</div>
+                <button id="clear-btn">CLEAR</button>
+                <button id="delete-btn">DELETE</button>
             </div>
             <div class="row">
-                <div class="button input">7</div>
-                <div class="button input">8</div>
-                <div class="button input">9</div>
-                <div class="button operator">÷</div>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="operator">÷</button>
             </div>
             <div class="row">
-                <div class="button input">4</div>
-                <div class="button input">5</div>
-                <div class="button input">6</div>
-                <div class="button operator">×</div>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="operator">×</button>
             </div> 
             <div class="row">
-                <div class="button input">1</div>
-                <div class="button input">2</div>
-                <div class="button input">3</div>
-                <div class="button operator">-</div>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="operator">-</button>
             </div>
             <div class="row">
-                <div class="button input">.</div>
-                <div class="button input">0</div>
-                <div class="button input">=</div>
-                <div class="button operator">+</div>
+                <button class="number">.</button>
+                <button class="number">0</button>
+                <button id="calculate">=</button>
+                <button class="operator">+</button>
             </div>
         </div>
     </div>
