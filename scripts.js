@@ -75,6 +75,10 @@ numberButtons.forEach(element => {
 const operatorButtons = document.querySelectorAll(".operator");
 operatorButtons.forEach(element => {
     element.addEventListener('click', () => {
+        if (storedValue != "" && currentValue != "") {
+            calculate();
+            updateDisplay();
+        }
         setOperator(element.innerHTML);
         storeCurrentValue();
         updateDisplay();
@@ -83,6 +87,9 @@ operatorButtons.forEach(element => {
 
 const calculateButton = document.querySelector("#calculate");
 calculateButton.addEventListener('click', () => {
+    if (currentValue == "") {
+        return
+    }
     calculate();
     updateDisplay();
 })
